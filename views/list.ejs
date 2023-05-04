@@ -1,0 +1,19 @@
+    <%- include('header'); -%> 
+    <section class="box" id="heading">
+        <h1><%= type %></h1>
+    </section>
+    <section class="box">
+            <%for(let i=0;i<taskName.length;i++){%>
+                <div class="item">
+                    <input type="checkbox">
+                   <p><%=taskName[i]%></p>
+                </div>
+            <% } %>
+        <form class="item" action="/" method="POST">
+            <input type="text" name="task" placeholder="New task" autocomplete="off">
+            <button type="submit" value=<%=type%> name="btn">+</button>
+        </form>
+
+    </section>
+</body>
+</html>
